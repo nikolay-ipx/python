@@ -1,5 +1,7 @@
 class Server:
+
     s_ip = 1
+
     def __init__(self):
         self.buffer = []
         self.ip = Server.s_ip
@@ -20,6 +22,7 @@ class Server:
 
 
 class Router:
+
     def __init__(self):
         self.buffer = []
         self.ser = {}
@@ -41,12 +44,10 @@ class Router:
 
 
 class Data:
+
     def __init__(self, msg, ip):
         self.data = msg
         self.ip = ip
-
-
-
 
 
 router = Router()
