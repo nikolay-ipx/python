@@ -13,7 +13,7 @@ class Dialog:
     def __new__(cls, *args, **kwargs):
         a=0
         if TYPE_OS == 1:
-            a
+            return a
         else:
             a = super().__new__(DialogLinux)
         a.name = args[0]
@@ -21,7 +21,9 @@ class Dialog:
     def connect(self):
         print(self.name)
 # TYPE_OS = 4
-a=Dialog('sdf')
-print(a.name)
+a=Dialog(8)
+a.connect()
+
+
 
 
