@@ -13,7 +13,7 @@ class Clock:
         return self.__time
 
     def __check_time(self, tm):
-        return type(tm) == int and 100000 > tm >= 0:
+        return type(tm) == int and 100000 > tm >= 0
 
 clock = Clock(4530)
 
