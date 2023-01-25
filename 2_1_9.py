@@ -12,8 +12,10 @@ class LinkedList:
     def remove_obj(self):
         if self.tail is None:
             return
-        self.tail = self.tail.__prev
-        self.tail.__next = None
+        prev = self.tail.get_prev()
+        if prev:
+            prev.set_next(None)
+        self.tail = prev
         if self.tail == None:
             self.head = None
     def get_data(self):
@@ -46,4 +48,6 @@ lst = LinkedList()
 lst.add_obj(ObjList("данные 1"))
 lst.add_obj(ObjList("данные 2"))
 lst.add_obj(ObjList("данные 3"))
+print(lst.get_data())
+lst.remove_obj()
 print(lst.get_data())
