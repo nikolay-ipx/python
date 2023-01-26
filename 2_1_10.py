@@ -22,7 +22,8 @@ class EmailValidator:
             em = email.split('@')
             if len(em[0]) >= 100 or len(em[1]) >= 50 or em[1].find('.') == -1:# or em[1].count('..') != 0:
                 return False
-
+        else:
+            return False
         return True
 
     @staticmethod
