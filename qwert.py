@@ -1,10 +1,18 @@
-class Point:
-    aa=1
-    bb=2
-    def __init__(self, x=0, y=0):
-        self.x=x
-        self.y=y
-a=Point(1,2)
-b=Point(3,4)
-print(a.x)
-print(b.x)
+import random
+from string import ascii_lowercase,digits
+CHOICE = ascii_lowercase + digits + '_' + '.'
+a=''.join([random.choice(CHOICE) for i in range(random.randint(1,100))])+'@gmail.com'
+b=True
+for i in a:
+    if a.count('@') != 1:
+        b=False
+    elif i not in CHOICE and i not in '_@.':
+        b=False
+    #elif len(a)
+
+
+print(b)
+print(a)
+print(a.find("e"))
+a=a.split('@')
+print(a)
