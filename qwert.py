@@ -1,18 +1,15 @@
-import random
-from string import ascii_lowercase,digits
-CHOICE = ascii_lowercase + digits + '_' + '.'
-a=''.join([random.choice(CHOICE) for i in range(random.randint(1,100))])+'@gmail.com'
-b=True
-for i in a:
-    if a.count('@') != 1:
-        b=False
-    elif i not in CHOICE and i not in '_@.':
-        b=False
-    #elif len(a)
+class Point:
+    __name = 1
+    __old = 2
+    @property
+    def name1(self):
+        return self.__name
+    @name1.setter
+    def name1(self,name):
+        self.__name = name
+
+    @name1.deleter
+    def name1(self):
+        del self.__name
 
 
-print(b)
-print(a)
-print(a.find("e"))
-a=a.split('@')
-print(a)
