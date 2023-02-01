@@ -62,6 +62,7 @@ class Stack:
 
         return a
 
+
 st = Stack()
 st.push(StackObj("obj1"))
 st.push(StackObj("obj2"))
