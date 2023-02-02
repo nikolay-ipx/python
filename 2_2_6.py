@@ -2,16 +2,6 @@ class StackObj:
     def __init__(self, data):
         self.__data = data
         self.__next = None
-
-    @property
-    def next(self):
-        return self.__next
-
-    @next.setter
-    def next(self, value):
-        if isinstance(value, StackObj) or value is None:
-            self.__next = value
-
     @property
     def data(self):
         return self.__data
@@ -19,6 +9,17 @@ class StackObj:
     @data.setter
     def data(self, value):
         self.__data = value
+
+    @property
+    def next(self):
+        return self.__next
+
+    @next.setter
+    def next(self, obj):
+        if isinstance(obj, StackObj) or obj is None:
+            self.__next = obj
+
+
 
 
 class Stack:
@@ -39,7 +40,7 @@ class Stack:
         h = self.top
         if h is None:
             return
-        while h.next != self.last:
+        while h and h.next != self.last:
             h = h.next
         if h:
             h.next = None
