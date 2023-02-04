@@ -14,7 +14,7 @@ class PhoneBook:
 class PhoneNumber:
     def __init__(self, number, fio):
         if type(number) is int and len(str(number)) == 11 and type(fio) is str:
-            self.number = numberta
+            self.number = number
             self.fio = fio
 
 
