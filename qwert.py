@@ -1,15 +1,22 @@
 class Point:
-    __name = 1
-    __old = 2
-    @property
-    def name1(self):
-        return self.__name
-    @name1.setter
-    def name1(self,name):
-        self.__name = name
+    def __init__(self,a):
+        self.xx=a
 
-    @name1.deleter
-    def name1(self):
-        del self.__name
+    @classmethod
+    def izi(cls,coord):
+        if type(coord) != int:
+            raise TypeError ('sdfsfsdgs')
+    @property
+    def xx(self):
+        return self.a
+    @xx.setter
+    def xx(self, value):
+        self.izi(value)
+        self.a = value
+
+e=Point(5)
+print(e.__dict__)
+
+
 
 
