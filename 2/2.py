@@ -20,9 +20,9 @@ class Dialog:
         return a
     def connect(self):
         print(self.name)
-# TYPE_OS = 4
+TYPE_OS = 4
 a=Dialog(8)
-a.connect()
+print(a)
 
 
 
