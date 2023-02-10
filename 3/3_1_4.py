@@ -12,27 +12,31 @@ class Shop:
 
 class Product:
     a = 1
-    b = {'name' : (str, ), 'weight' : (float, int), 'price' : (int, )}
+    b = {'name' : (str, ), 'weight' : (float, int), 'price' : (int, float), 'id' : (int, )}
     def __init__(self, name, weight, price):
-        # self.id = 1
+
         self.name = name
         self.weight = weight
         self.price = price
-        # self.a += 1
+        self.id = self.a
+        Product.a += 1
 
     def __setattr__(self, key, value):
-        if type(value) in self.b[key]:
-            object.__setattr__(self, key, value)
-        else:
+        if type(value) not in self.b[key]:
             raise TypeError("Неверный тип присваиваемых данных.")
+        elif (key == 'weight' or key == 'price') and value <= 0:
+            raise TypeError("Неверный тип присваиваемых данных.")
+        object.__setattr__(self, key, value)
+
 
     def __delattr__(self, item):
         if item == 'id':
             raise AttributeError("Атрибут id удалять запрещено.")
 
-# shop = Shop("Балакирев и К")
-book = Product("Python ООП", 100, 1024)
-# shop.add_product(book)
-# shop.add_product(Product("Python", 150, 512))
+shop = Shop("Балакирев и К")
+book = Product("Python ООП", 100, 9)
+shop.add_product(book)
+shop.add_product(Product("Python", 150, 512))
 # for p in shop.goods:
-#     print(f"{p.name}, {p.weight}, {p.price}")
+#     print(f"{p.weight}, {p.price}")
+print(book.__dict__)
