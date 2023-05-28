@@ -38,3 +38,4 @@ mus.add_exhibit(p)
 # for x in mus.exhibits:
 #     print(x.descr)
 print(mus.get_info_exhibit(0))
+print('hello')
