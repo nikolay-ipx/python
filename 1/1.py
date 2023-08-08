@@ -1,3 +1,6 @@
-a = [1,2,3]#'1!2!3'
-b=lambda x: x for x in range(10)
-print(b)
+sep = input()
+input1 = input()
+input2 = input()
+input3 = input()
+input4 = input()
+print(sep.join([input1,input2,input3,input4]))
