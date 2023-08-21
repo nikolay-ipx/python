@@ -26,3 +26,4 @@ class MotherBoard:
 
 
 mb = MotherBoard('asus', CPU('amd', 3400), Memory('kingston', 3400), Memory('sandisk', 3400))
+print(mb.get_config())

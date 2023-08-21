@@ -1,6 +1,5 @@
-sep = input()
-input1 = input()
-input2 = input()
-input3 = input()
-input4 = input()
-print(sep.join([input1,input2,input3,input4]))
+string = '1233212123231'
+print(string.strip('1'))
+print(string.strip('2'))
+
+
