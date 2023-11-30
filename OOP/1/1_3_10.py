@@ -3,4 +3,6 @@ class Person:
     job = 'Программист'
     city = 'Москва'
 p1 = Person()
-print(p1 == 'job')
+p1.job1 = 'Программист'
+print(p1.__dict__)
+print(hasattr(p1,'job1'))
