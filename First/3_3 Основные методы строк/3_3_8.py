@@ -1,0 +1,5 @@
+a,b,c = map(str,input().split())
+d=max(len(a),len(b),len(c))
+print(a.rjust(d,'0'))
+print(b.rjust(d,'0'))
+print(c.rjust(d,'0'))
