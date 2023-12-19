@@ -1,0 +1,6 @@
+a = input()
+a = a.replace(' ', '')
+a = a.replace('+', '_+')
+a = a.replace('-', '_-')
+b = map(int, a.split('_'))
+print(sum(b))
