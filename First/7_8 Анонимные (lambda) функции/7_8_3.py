@@ -1,0 +1,1 @@
+get_div = lambda x,y: None if x == 0 or y == 0 else x/y

@@ -1,0 +1,7 @@
+a=set(map(int,input().split()))
+b=set(map(int,input().split()))
+c=list(a&b)
+d=filter(lambda x: x%2==0,c)
+e=list(d)
+e.sort()
+print(*e)
