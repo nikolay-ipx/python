@@ -3,5 +3,6 @@ import random
 random.seed(1)
 a=list(map(int,input().split()))
 c=random.randint(a[0],a[1])
+print(a)
 print(c)
 # здесь продолжайте программу
